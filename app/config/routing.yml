@@ -1,0 +1,28 @@
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+frontend:
+    resource: "@FrontendBundle/Resources/config/routing/persona.yml"
+    prefix:   /persona
+acme_demo_escuela:
+    resource: "@AcmeDemoBundle/Resources/config/routing/escuela.yml"
+    prefix:   /escuela
+auditoria:
+    resource: "@AuditoriaBundle/Resources/config/routing.yml"
+    prefix:   /auditoria
+
+AuditoriaBundle_prueba:
+    resource: "@AuditoriaBundle/Resources/config/routing/prueba.yml"
+    prefix:   /prueba
+
+AuditoriaBundle_logtrace:
+        resource: "@AuditoriaBundle/Resources/config/routing/logtrace.yml"
+        prefix:   /logtrace
+
+AdminBundle_estudiante:
+    resource: "@AdminBundle/Resources/config/routing/estudiante.yml"
+    prefix:   /estudiante
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

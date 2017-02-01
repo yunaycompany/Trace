@@ -1,0 +1,6 @@
+1--- poner la configuracion de tu servidor de BD en app/config/parameters.yml
+2---Crear Base de Dato doctrine:database:create 
+3--- Crear schema         doctrine:schema:create' o Update --force (En caso de copiarlo como módulo)
+4--- Bajar los ficheros    assets:install
+5--- http://localhost/trace/web/app_dev.php/logtrace/
+6--- LLenar BD http://localhost/trace/web/app_dev.php/persona/

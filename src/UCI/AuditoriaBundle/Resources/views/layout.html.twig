@@ -1,0 +1,30 @@
+{% extends "::base.html.twig"%}
+{% block title %}.:Sistema de Monitoreo y Gestión de trazas:.{% endblock %}
+{% block stylesheets %}
+     <link href="{{ asset('assets/extjs/resources/css/ext-all.css') }}" rel="stylesheet" type="text/css" >
+{% endblock %}
+{% block body %}{% endblock %}
+{% block javascripts %}
+            <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+            <script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/extjs/ext-all-dev.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/extjs/locale/ext-lang-es.js') }}"></script>
+            <script type="text/javascript">
+			Ext.Loader.setConfig({
+				enabled: true
+			});
+			Ext.onReady(function(){
+				Ext.Msg.wait('Iniciando');
+			});
+			Ext.application({
+				autoCreateViewport: true,
+				name: 'UCI',
+				appFolder: '{{ asset("assets/app") }}',
+				controllers: ['Traza'],
+				launch: function(){
+					Ext.Msg.hide();
+				}
+			});
+
+            </script>
+{% endblock %}

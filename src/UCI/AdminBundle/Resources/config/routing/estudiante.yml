@@ -1,0 +1,30 @@
+estudiante:
+    pattern:  /
+    defaults: { _controller: "AdminBundle:Estudiante:index" }
+
+estudiante_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AdminBundle:Estudiante:show" }
+
+estudiante_new:
+    pattern:  /new
+    defaults: { _controller: "AdminBundle:Estudiante:new" }
+
+estudiante_create:
+    pattern:  /create
+    defaults: { _controller: "AdminBundle:Estudiante:create" }
+    requirements: { _method: post }
+
+estudiante_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AdminBundle:Estudiante:edit" }
+
+estudiante_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AdminBundle:Estudiante:update" }
+    requirements: { _method: post|put }
+
+estudiante_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AdminBundle:Estudiante:delete" }
+    requirements: { _method: post|delete }

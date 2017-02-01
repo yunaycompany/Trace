@@ -1,0 +1,30 @@
+prueba:
+    pattern:  /
+    defaults: { _controller: "AuditoriaBundle:Prueba:prueba" }
+
+prueba_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AuditoriaBundle:Prueba:show" }
+
+prueba_new:
+    pattern:  /new
+    defaults: { _controller: "AuditoriaBundle:Prueba:new" }
+
+prueba_create:
+    pattern:  /create
+    defaults: { _controller: "AuditoriaBundle:Prueba:create" }
+    requirements: { _method: post }
+
+prueba_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AuditoriaBundle:Prueba:edit" }
+
+prueba_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AuditoriaBundle:Prueba:update" }
+    requirements: { _method: post|put }
+
+prueba_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AuditoriaBundle:Prueba:delete" }
+    requirements: { _method: post|delete }

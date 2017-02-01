@@ -1,0 +1,24 @@
+#parameters:
+#    auditoria.example.class: UCI\AuditoriaBundle\Service
+
+services:
+    classlist:
+        class: UCI\AuditoriaBundle\Service\AnnotationLoader
+        calls:
+           - [ setContainer, [ @service_container ] ]
+    traza:
+        class: UCI\AuditoriaBundle\Service\RegisterListener
+        calls:
+           - [ setContainer, [ @service_container ] ]
+        tags:
+           - { name: doctrine.event_listener, event : onFlush, method: onFlush }
+           - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+    seguridad:
+        class: UCI\AuditoriaBundle\Service\SeguridadListener        
+        calls:
+           - [ setContainer, [ @service_container ] ]
+           - [ setEntityManager, [ @doctrine.orm.entity_manager ] ]
+        tags:
+           - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+           - { name: kernel.event_listener, event: security.authentication.failure }
+           - { name: kernel.event_listener, event: security.authentication.success }

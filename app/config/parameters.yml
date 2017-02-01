@@ -1,0 +1,18 @@
+parameters:
+    database_driver:   pdo_pgsql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     auditoria
+    database_user:     postgres
+    database_password: zionucicu
+
+    mailer_transport:  smtp
+    mailer_host:       smtp.uci.cu
+    mailer_encryption: tls
+    mailer_port:       25
+    mailer_auth_mode:  login
+    mailer_user:       ogonzalezf@uci.cu
+    mailer_password:   ZION.uci.cu.20!4
+
+    locale:            es
+    secret:            prueba

@@ -1,0 +1,59 @@
+logtrace_list:
+    pattern:  /list
+    defaults: { _controller: "AuditoriaBundle:LogTrace:index" }
+    options:
+      expose: true
+
+logtrace_usuario:
+    pattern:  /user
+    defaults: { _controller: "AuditoriaBundle:LogTrace:usuarios" }
+    options:
+      expose: true
+
+logtrace_gusuario:
+    pattern:  /trazaip
+    defaults: { _controller: "AuditoriaBundle:LogTrace:trazaip" }
+    options:
+      expose: true
+
+logtrace_trazaip:
+    pattern:  /trazaip
+    defaults: { _controller: "AuditoriaBundle:LogTrace:trazaip" }
+    options:
+      expose: true
+
+logtrace_alltraza:
+    pattern:  /alltraza
+    defaults: { _controller: "AuditoriaBundle:LogTrace:alltraza" }
+    options:
+      expose: true
+
+logtrace_descargar:
+    pattern:  /descargar
+    defaults: { _controller: "AuditoriaBundle:LogTrace:generar" }
+    options:
+      expose: true
+
+logtrace:
+    pattern: /
+    defaults: { _controller: "AuditoriaBundle:LogTrace:inicio" }
+    options:
+      expose: true
+
+logtrace_ip:
+    pattern: /allip
+    defaults: { _controller: "AuditoriaBundle:LogTrace:ip" }
+    options:
+      expose: true
+
+logtrace_allhoraacc:
+    pattern: /allhoraacc
+    defaults: { _controller: "AuditoriaBundle:LogTrace:getAllAccion" }
+    options:
+      expose: true
+
+logtrace_temp:
+    pattern: /temp
+    defaults: { _controller: "AuditoriaBundle:LogTrace:getTemp" }
+    options:
+      expose: true

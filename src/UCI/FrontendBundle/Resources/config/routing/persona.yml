@@ -1,0 +1,30 @@
+persona:
+    pattern:  /
+    defaults: { _controller: "FrontendBundle:Persona:index" }
+
+persona_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "FrontendBundle:Persona:show" }
+
+persona_new:
+    pattern:  /new
+    defaults: { _controller: "FrontendBundle:Persona:new" }
+
+persona_create:
+    pattern:  /create
+    defaults: { _controller: "FrontendBundle:Persona:create" }
+    requirements: { _method: post }
+
+persona_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "FrontendBundle:Persona:edit" }
+
+persona_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "FrontendBundle:Persona:update" }
+    requirements: { _method: post|put }
+
+persona_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "FrontendBundle:Persona:delete" }
+    requirements: { _method: post|delete }

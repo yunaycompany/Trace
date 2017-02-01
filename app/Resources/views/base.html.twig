@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <style type="text/css">
+        .blist {
+            background-image: url(../../assets/images/list-items.gif) !important;
+        }
+        .reset {
+            background-image: url(../../assets/images/stop.png) !important;
+        }
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            
+        {% endblock %}
+    </body>
+</html>

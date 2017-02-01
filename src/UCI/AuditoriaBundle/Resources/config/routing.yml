@@ -1,0 +1,3 @@
+auditoria_homepage:
+    pattern:  /hola
+    defaults: { _controller: AuditoriaBundle:Default:index }

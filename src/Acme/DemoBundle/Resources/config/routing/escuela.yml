@@ -1,0 +1,30 @@
+escuela:
+    pattern:  /
+    defaults: { _controller: "AcmeDemoBundle:Escuela:index" }
+
+escuela_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AcmeDemoBundle:Escuela:show" }
+
+escuela_new:
+    pattern:  /new
+    defaults: { _controller: "AcmeDemoBundle:Escuela:new" }
+
+escuela_create:
+    pattern:  /create
+    defaults: { _controller: "AcmeDemoBundle:Escuela:create" }
+    requirements: { _method: post }
+
+escuela_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AcmeDemoBundle:Escuela:edit" }
+
+escuela_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AcmeDemoBundle:Escuela:update" }
+    requirements: { _method: post|put }
+
+escuela_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AcmeDemoBundle:Escuela:delete" }
+    requirements: { _method: post|delete }
